@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>如何在codespace部署一个vuepress</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.e8e4f3a3.css" as="style"><link rel="preload" href="/assets/js/app.d0b121fe.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/9.e5007572.js" as="script"><link rel="prefetch" href="/assets/js/10.2c98ec17.js"><link rel="prefetch" href="/assets/js/3.414988de.js"><link rel="prefetch" href="/assets/js/4.d12742be.js"><link rel="prefetch" href="/assets/js/5.216cae74.js"><link rel="prefetch" href="/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/assets/js/7.9c9172a7.js"><link rel="prefetch" href="/assets/js/8.21baafb4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e8e4f3a3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="如何在codespace部署一个vuepress"><a href="#如何在codespace部署一个vuepress" class="header-anchor">#</a> 如何在codespace部署一个vuepress</h1> <ul><li>对codespace了解不深，看到了想用一下，没看文档，没做攻略，直接进来就开始用，摸着石头过河，遇到了很多问题。</li> <li>前端页面类似于vscode,现在目测插件也可以相同的。</li></ul> <h2 id="感受"><a href="#感受" class="header-anchor">#</a> 感受</h2> <ul><li>在codespace内写播客，就不再需要固定的电脑了，只有有一个浏览器，能登陆github就可以随时开始。甚至可以实时同步</li> <li>但是个人感觉，其实他的功能远不止于此，还有待我大力发掘。</li> <li>vuepress是很好的博客框架，第一次接触就很快能上手，虽然还有很多需要学习，但是整体整体感受很好，而且我习惯了写markdown，这个用起来就很舒服。</li> <li>这次把他俩结合起来，算是意外收获。</li> <li>先这样，之后想起来什么再说。</li></ul> <h2 id="环境"><a href="#环境" class="header-anchor">#</a> 环境</h2> <ul><li>codespace类似于一个docker容器或者linux虚拟机。单个空间是一个单独的虚拟机。它的生命周期为从创建到删除。中间关闭，停止，其中的数据都不会被删除。</li> <li>我使用的是空白的template,该机器内部，直接内置了node(v19.8.1)，npm(9.5.1)，yarn(1.22.19),java(openjdk version &quot;17.0.6&quot; 2023-01-17 LTS),python(Python 3.10.4),nvm(0.39.2),curl。我个人只坚持了这些东西，其他的如果有需要可以自行确认。</li></ul> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <ul><li>在知道了基本的node环境之后，就可以进行安装了。</li></ul> <p>整体创建参考：<a href="https://cchroot.github.io/2020/06/20/vuepress%E5%BF%AB%E9%80%9F%E5%88%B6%E4%BD%9Cvue%E6%96%87%E6%A1%A3%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener noreferrer">https://cchroot.github.io/2020/06/20/vuepress%E5%BF%AB%E9%80%9F%E5%88%B6%E4%BD%9Cvue%E6%96%87%E6%A1%A3%E5%8D%9A%E5%AE%A2/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <ul><li>但是全抄可能会遇到一些问题，主要在于权限和配置问题，在这里PO出我的package.json，如果能减少您踩坑，我会很高兴。</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;studyNote&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.0.0&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index.js&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cc&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;license&quot;</span><span class="token operator">:</span> <span class="token string">&quot;MIT&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;devDependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;vuepress&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.9.9&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;docs:dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;export NODE_OPTIONS=--openssl-legacy-provider &amp;&amp; vuepress dev docs&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;docs:build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;export NODE_OPTIONS=--openssl-legacy-provider &amp;&amp;  vuepress build docs&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;deploy&quot;</span><span class="token operator">:</span> <span class="token string">&quot;bash deploy.sh&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>主要设置为：<code>export NODE_OPTIONS=--openssl-legacy-provider &amp;&amp;</code></li></ul> <h2 id="发布到github-pages"><a href="#发布到github-pages" class="header-anchor">#</a> 发布到github pages</h2> <p>我本人参考的是<a href="https://juejin.cn/post/6844903999129436174#heading-6" target="_blank" rel="noopener noreferrer">https://juejin.cn/post/6844903999129436174#heading-6<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>和<a href="https://juejin.cn/post/6844904185838698509#heading-13" target="_blank" rel="noopener noreferrer">https://juejin.cn/post/6844904185838698509#heading-13<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <ul><li>但是还是遇到了一些问题
+<ul><li>连接到git,需要完整的过程，包括ssh密钥，连接git等操作</li> <li>注意codespace里的主线名称为：main，可能存在不存在master分支的情况，</li></ul></li></ul> <h2 id="一键部署"><a href="#一键部署" class="header-anchor">#</a> 一键部署</h2> <ul><li>如果你好好看了以上的文档，应该不会遇到其他什么大的问题，可以直接在控制台输入以下命令<code>yarn deploy</code>，就可以一键部署到github pages上了。一般地址为：https://&lt;username&gt;.github.io/</li></ul> <h2 id="附录"><a href="#附录" class="header-anchor">#</a> 附录</h2> <ul><li>deploy.sh</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 确保脚本抛出遇到的错误</span>
+<span class="token builtin class-name">set</span> <span class="token parameter variable">-e</span>
+
+<span class="token comment"># 打包生成静态文件</span>
+<span class="token function">yarn</span>  docs:build
+
+<span class="token comment"># 进入打包好的文件夹</span>
+<span class="token builtin class-name">cd</span> docs/.vuepress/dist
+
+<span class="token comment"># 创建git的本地仓库，提交修改</span>
+<span class="token function">git</span> init
+<span class="token function">git</span> <span class="token function">add</span> <span class="token parameter variable">-A</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">'deploy'</span>
+
+<span class="token comment"># 覆盖式地将本地仓库发布至github，因为发布不需要保留历史记录</span>
+<span class="token comment"># 格式为：git push -f git@github.com:'用户名'/'仓库名'.git master</span>
+<span class="token function">git</span> push <span class="token parameter variable">-f</span> git@github.com:guocongcongcong/guocongcongcong.github.io.git main
+
+<span class="token builtin class-name">cd</span> -
+</code></pre></div><ul><li>目录结构</li></ul> <div class="language- extra-class"><pre class="language-text"><code>codespaces-blank
+└─ studyNote
+   ├─ deploy.sh
+   ├─ docs
+   │  ├─ .vuepress
+   │  │  ├─ README.md
+   │  │  ├─ components
+   │  │  ├─ config.js
+   │  │  ├─ config.ts
+   │  │  ├─ dist
+   │  │  │  ├─ 404.html
+   │  │  │  ├─ assets
+   │  │  │  │  ├─ css
+   │  │  │  │  │  └─ 0.styles.e8e4f3a3.css
+   │  │  │  │  ├─ img
+   │  │  │  │  │  └─ search.83621669.svg
+   │  │  │  │  └─ js
+   │  │  │  │     ├─ 10.2c98ec17.js
+   │  │  │  │     ├─ 2.733019b2.js
+   │  │  │  │     ├─ 3.414988de.js
+   │  │  │  │     ├─ 4.d12742be.js
+   │  │  │  │     ├─ 5.216cae74.js
+   │  │  │  │     ├─ 6.2d0a63f8.js
+   │  │  │  │     ├─ 7.9c9172a7.js
+   │  │  │  │     ├─ 8.21baafb4.js
+   │  │  │  │     ├─ 9.1512861e.js
+   │  │  │  │     └─ app.26de7cc5.js
+   │  │  │  ├─ guide
+   │  │  │  │  ├─ index.html
+   │  │  │  │  └─ zh
+   │  │  │  │     └─ notes
+   │  │  │  │        ├─ codespace安装vuepress.html
+   │  │  │  │        └─ loveyou.html
+   │  │  │  └─ index.html
+   │  │  ├─ enhanceApp.js
+   │  │  ├─ pages
+   │  │  ├─ public
+   │  │  └─ styles
+   │  │     └─ palette.styl
+   │  ├─ README.md
+   │  └─ guide
+   │     ├─ README.md
+   │     └─ zh
+   │        └─ notes
+   │           ├─ codespace安装vuepress.md
+   │           └─ loveyou.md
+   ├─ package.json
+   ├─ yarn-error.log
+   └─ yarn.lock
+
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/vuejs/vuepress/edit/master/packages/docs/docs/guide/zh/notes/codespace安装vuepress.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d0b121fe.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/9.e5007572.js" defer></script>
+  </body>
+</html>
